@@ -283,11 +283,6 @@ if "uploader_key" not in st.session_state:
 # -----------------------------------------------------------------------------
 # 5. SIDEBAR CONTROLS (WITH BITS ID: 2026Ak05001)
 # -----------------------------------------------------------------------------
-st.sidebar.image(
-    "https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/BITS_Pilani-Logo.svg/1200px-BITS_Pilani-Logo.svg.png",
-    width=130
-)
-
 # Prominent BITS ID in sidebar
 st.sidebar.markdown(f"""
 <div style="background-color: #0b2545; color: white; padding: 12px 14px; border-radius: 8px; text-align: center; margin: 10px 0 16px 0; border: 1.5px solid #1e40af;">
