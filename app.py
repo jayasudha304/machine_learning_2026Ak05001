@@ -568,14 +568,18 @@ if selected_model_option == "All Models (Comparative Benchmark)":
         # Champion KPI Cards
         best_acc = comparison_df.loc[comparison_df['Accuracy'].idxmax()]
         best_auc = comparison_df.loc[comparison_df['AUC Score'].idxmax()]
+        best_prec = comparison_df.loc[comparison_df['Precision'].idxmax()]
+        best_rec = comparison_df.loc[comparison_df['Recall'].idxmax()]
         best_f1 = comparison_df.loc[comparison_df['F1 Score'].idxmax()]
         best_mcc = comparison_df.loc[comparison_df['MCC Score'].idxmax()]
 
-        col_b1, col_b2, col_b3, col_b4 = st.columns(4)
+        col_b1, col_b2, col_b3, col_b4, col_b5, col_b6 = st.columns(6)
         col_b1.metric("Highest Accuracy", f"{best_acc['Accuracy']:.4f}", best_acc['Model'])
         col_b2.metric("Highest AUC Score", f"{best_auc['AUC Score']:.4f}", best_auc['Model'])
-        col_b3.metric("Highest F1 Score", f"{best_f1['F1 Score']:.4f}", best_f1['Model'])
-        col_b4.metric("Highest MCC Score", f"{best_mcc['MCC Score']:.4f}", best_mcc['Model'])
+        col_b3.metric("Highest Precision", f"{best_prec['Precision']:.4f}", best_prec['Model'])
+        col_b4.metric("Highest Recall", f"{best_rec['Recall']:.4f}", best_rec['Model'])
+        col_b5.metric("Highest F1 Score", f"{best_f1['F1 Score']:.4f}", best_f1['Model'])
+        col_b6.metric("Highest MCC Score", f"{best_mcc['MCC Score']:.4f}", best_mcc['Model'])
 
         st.markdown("---")
         col_plot1, col_plot2 = st.columns(2)
