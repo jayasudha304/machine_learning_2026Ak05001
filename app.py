@@ -317,7 +317,7 @@ st.sidebar.markdown("#### 🧪 **Step 3.1: Test Dataset Selection**")
 
 data_source = st.sidebar.radio(
     "Choose Test Data Mode:",
-    options=["Fixed Test Dataset (Default)", "Upload Custom Test CSV"],
+    options=["Default Test Dataset (Default)", "Upload Custom Test CSV"],
     help="Step 3: Default fixed test dataset is loaded on launch. Upload option allows testing custom CSVs without retraining."
 )
 
@@ -327,7 +327,7 @@ is_custom_dataset = False
 custom_filename = ""
 upload_error_msg = None
 
-if data_source == "Fixed Test Dataset (Default)":
+if data_source == "Default Test Dataset (Default)":
     active_df = default_df
     is_custom_dataset = False
     st.sidebar.success(f"Loaded Default Test Dataset (**{len(active_df)} instances**)")
@@ -462,7 +462,7 @@ if not is_custom_dataset:
     st.markdown(f"""
     <div class="dataset-badge-default">
         <span style="background-color: #0284c7; color: white; padding: 5px 14px; border-radius: 4px; font-weight: 800; font-size: 13px; letter-spacing: 0.5px;">DEFAULT DATASET ACTIVE</span>
-        <h2>📂 ACTIVE DATASET: Fixed Default Test Dataset</h2>
+        <h2>📂 ACTIVE DATASET: Default Test Dataset</h2>
         <p>
             <b>Dataset Source:</b> UCI Bank Marketing (Fixed 20% Stratified Holdout Test Split)<br>
             <b>Dataset Specifications:</b> <span style="font-weight: 700; color: #0369a1;">905 rows × 17 columns</span> &nbsp;|&nbsp; 
@@ -504,7 +504,7 @@ y_eval = active_df[TARGET_COLUMN]
 # 7. LOGIC: ALL MODELS COMPARATIVE BENCHMARK VIEW
 # -----------------------------------------------------------------------------
 if selected_model_option == "All Models (Comparative Benchmark)":
-    dataset_title_tag = f"Uploaded File: {custom_filename}" if is_custom_dataset else "Fixed Default Test Dataset"
+    dataset_title_tag = f"Uploaded File: {custom_filename}" if is_custom_dataset else "Default Test Dataset"
     st.subheader(f"📊 Comparative Benchmark: All 5 Classification Models [{dataset_title_tag}]")
     st.markdown("""
     All models are evaluated on the **exact same test dataset** without retraining.
@@ -682,7 +682,7 @@ if selected_model_option == "All Models (Comparative Benchmark)":
 
     # --- TAB 3: CLASSIFICATION REPORTS FOR ALL 5 MODELS ---
     with tab_cr:
-        st.markdown("#### 📄 Scikit-Learn Classification Reports (All 5 Models)")
+        st.markdown("#### 📄 Classification Reports (All 5 Models)")
         st.markdown("Detailed class-wise breakdown (Class 0: No Deposit, Class 1: Subscribed Deposit):")
 
         cr_tabs = st.tabs(MODEL_NAMES)
@@ -723,7 +723,7 @@ if selected_model_option == "All Models (Comparative Benchmark)":
 # -----------------------------------------------------------------------------
 else:
     model_name = selected_model_option
-    dataset_title_tag = f"Uploaded File: {custom_filename}" if is_custom_dataset else "Fixed Default Test Dataset"
+    dataset_title_tag = f"Uploaded File: {custom_filename}" if is_custom_dataset else "Default Test Dataset"
     st.subheader(f"🔍 Detailed Evaluation: {model_name} [{dataset_title_tag}]")
 
     model = load_saved_model(model_name)
@@ -780,7 +780,7 @@ else:
             st.caption(f"**TN:** {tn} | **FP:** {fp} | **FN:** {fn} | **TP:** {tp}")
 
         with c_col2:
-            st.markdown("##### 📄 Scikit-Learn Classification Report")
+            st.markdown("##### 📄 Classification Report")
             report_dict = classification_report(y_eval, y_pred, output_dict=True, zero_division=0)
             report_df = pd.DataFrame(report_dict).transpose()
 
