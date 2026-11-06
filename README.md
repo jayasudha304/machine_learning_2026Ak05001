@@ -1,5 +1,5 @@
 # BITS Pilani - M.Tech in AIML (WILP)
-## Course: Machine Learning | Assignment - 2 (Marks: 15)
+## Course: Machine Learning | Assignment - 2
 ### **Student ID: 2026Ak05001**
 
 ---
@@ -11,7 +11,7 @@ Direct marketing campaigns via telephone represent a significant operational cos
 
 ---
 
-## b. Dataset Description [ 1 Mark ]
+## b. Dataset Description
 
 * **Dataset Selected:** [Bank Marketing Dataset](https://archive.ics.uci.edu/dataset/222/bank+marketing)
 * **Public Repository Source:** UCI Machine Learning Repository & Kaggle (S. Moro, P. Cortez, and P. Rita, 2014)
@@ -49,16 +49,16 @@ Direct marketing campaigns via telephone represent a significant operational cos
 
 ---
 
-## c. Github Repository Link [ 1 Mark ]
+## c. Github Repository Link
 
-* **GitHub Repository URL:** [https://github.com/2026Ak05001/bits-aiml-ml-assignment-2](https://github.com/2026Ak05001/bits-aiml-ml-assignment-2)
-* **Streamlit Community Cloud Live App:** [https://2026ak05001-bits-aiml-ml-assignment-2.streamlit.app](https://2026ak05001-bits-aiml-ml-assignment-2.streamlit.app)
+* **GitHub Repository URL:** [https://github.com/jayasudha304/machine_learning_2026Ak05001.git](https://github.com/jayasudha304/machine_learning_2026Ak05001.git)
+* **Streamlit Community Cloud Live App:** [https://machinelearning2026ak05001-8ngvhp8jxbd4gbvgnxvdwf.streamlit.app/](https://machinelearning2026ak05001-8ngvhp8jxbd4gbvgnxvdwf.streamlit.app/)
 
 *The repository contains all required files for full reproducibility: `app.py`, `train.py`, `requirements.txt`, `README.md`, `data/` (including `test_data.csv`), and serialized model pipelines in `models/`.*
 
 ---
 
-## d. Models Used [ 5 Marks — 1 Mark for all the metrics for each model ]
+## d. Models Used
 
 All five models are built using a unified Scikit-Learn `Pipeline` with a `ColumnTransformer` preprocessor (`StandardScaler` for numeric features and `OneHotEncoder(handle_unknown='ignore')` for categorical features):
 1. **Logistic Regression:** L-BFGS solver, `max_iter=1000`, `C=1.0`, `random_state=42`
@@ -79,7 +79,7 @@ All five models are built using a unified Scikit-Learn `Pipeline` with a `Column
 
 ---
 
-### Observations on the Performance of Each Model on the Chosen Dataset [ 3 Marks ]
+### Observations on the Performance of Each Model on the Chosen Dataset
 
 | ML Model Name | Observation about model performance |
 | :--- | :--- |
