@@ -1,0 +1,42 @@
+{
+    "Logistic Regression": {
+        "Accuracy": 0.8917127071823204,
+        "AUC Score": 0.87890001314875,
+        "Precision": 0.711340206185567,
+        "Recall": 0.49640287769784175,
+        "F1 Score": 0.5847457627118644,
+        "MCC Score": 0.5359765848093191
+    },
+    "Decision Tree Classifier": {
+        "Accuracy": 0.8773480662983425,
+        "AUC Score": 0.8663852208050792,
+        "Precision": 0.6346153846153846,
+        "Recall": 0.4748201438848921,
+        "F1 Score": 0.5432098765432098,
+        "MCC Score": 0.4807221727050124
+    },
+    "K-Nearest Neighbor Classifier": {
+        "Accuracy": 0.8773480662983425,
+        "AUC Score": 0.7804205721584611,
+        "Precision": 0.7258064516129032,
+        "Recall": 0.3237410071942446,
+        "F1 Score": 0.44776119402985076,
+        "MCC Score": 0.4303960838322729
+    },
+    "Naive Bayes Classifier": {
+        "Accuracy": 0.8,
+        "AUC Score": 0.7886808047034957,
+        "Precision": 0.390625,
+        "Recall": 0.539568345323741,
+        "F1 Score": 0.45317220543806647,
+        "MCC Score": 0.34114813037680847
+    },
+    "Support Vector Machine": {
+        "Accuracy": 0.8928176795580111,
+        "AUC Score": 0.8315081616169206,
+        "Precision": 0.828125,
+        "Recall": 0.381294964028777,
+        "F1 Score": 0.5221674876847291,
+        "MCC Score": 0.5160865317005151
+    }
+}
